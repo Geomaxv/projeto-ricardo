@@ -4,13 +4,10 @@ module.exports = function (app) {
       res.render("home/index");
     },
     login: function (req, res) {
-      console.log("vou printar o req.body");
-      console.log(req);
-      let email = req.body.email;
-      let nome = req.body.nome;
-      console.log(req.body);
+      let email = req.body.usuario.email;
+      let nome = req.body.usuario.nome;
       if (email && nome) {
-        let usuario = { nome, email };
+        let usuario = req.body.usuario;
         usuario.reviews = [];
         req.session.usuario = usuario;
         res.redirect("/feed");

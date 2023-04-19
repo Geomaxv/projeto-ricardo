@@ -1,0 +1,17 @@
+.feed-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.feed-header img {
+    width: 50px;
+}
+
+.feed-header h1 {
+    color: #333;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
